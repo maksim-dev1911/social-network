@@ -1,0 +1,28 @@
+.avatar {
+    width: 50%;
+    margin: auto;
+}
+
+.people_container {
+
+}
+
+.people_container p {
+    display: flex;
+    justify-content: center;
+}
+
+.friends {
+    margin-left: 800px;
+}
+
+.friends h1{
+    font-size: 23px;
+    font-weight: 600;
+    color: #3e416d;
+    margin-bottom: 0;
+}
+
+.number_people {
+    margin-bottom: 20px;
+}

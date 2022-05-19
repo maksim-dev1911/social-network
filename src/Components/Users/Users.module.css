@@ -1,0 +1,22 @@
+.main_content {
+    margin-left: 21%;
+}
+
+.userPhoto {
+    padding: 10px;
+    max-width: 50px;
+    min-width: 50px;
+}
+
+.users {
+    display: flex;
+    padding: 10px;
+    border: solid #377dff 1px;
+    margin-bottom: 10px;
+    width: 500px;
+}
+
+.indent {
+    margin-left: 5px;
+}
+

@@ -1,0 +1,113 @@
+.background_img {
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/src/assets/images/login-banner.jpg");
+    background-position: 100%;
+    background-size: cover;
+}
+
+.sign_block {
+    flex: 1 1 48%;
+    padding: 110px 30px 30px 30px;
+    text-align: center;
+}
+
+.container_text {
+    max-width: 500px;
+}
+
+.banner {
+    flex: 1 1 70%;
+    position: relative;
+    height: 100vh;
+}
+
+.banner_in {
+    height: 50px;
+    display: flex;
+    width: 50px;
+}
+
+.in_container {
+    background-color: #fff;
+    max-width: 50px;
+    border-radius: 6px;
+    margin-top: 42%;
+}
+
+.text_banner {
+    color: #fff;
+    font-size: 34px;
+    font-weight: 600;
+    margin: 15px 0;
+}
+
+.text_signIn {
+    font-size: 31px;
+    font-weight: 600;
+    color: #545454;
+    margin: 20px 0;
+}
+
+.sign {
+}
+
+.content {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.input {
+    border-radius: 7px;
+    border: 1px solid #eceff5;
+    outline: none;
+    color: #666;
+    height: 43px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: #f1f3f4;
+    margin-top: 20px;
+}
+
+.button_start {
+    width: 100%;
+    height: 45px;
+    background-color: #377dff;
+    border-radius: 6px;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-top: 7px;
+}
+
+.checkbox {
+    width: 15px;
+    margin-left: 10px;
+    height: 15px;
+    outline: none;
+}
+
+.information {
+    display: flex;
+    color: hsla(0,0%,100%,.529412);
+    font-size: 16px;
+    margin-top: 25px;
+}
+
+.about {
+    margin-right: 15px;
+}
+

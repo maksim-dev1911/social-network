@@ -1,0 +1,18 @@
+.item img {
+    width: 3%;
+    margin-right: 5px;
+}
+
+.like_img {
+    width: 70%;
+    margin: 5px 0px 5px 10px;
+}
+
+.like_container {
+    display: flex;
+}
+
+.like_photo {
+    margin-right: 5px;
+}
+

@@ -1,0 +1,37 @@
+.item {
+    font-size: 16px;
+    height: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    font-weight: 600;
+}
+
+.item a {
+    color: #202124;
+}
+
+.nav {
+    padding: 10px;
+}
+
+.item a.active {
+    color: #1a73e8;
+}
+
+
+.aside {
+    flex: 0 0 20%;
+    max-width: 20%;
+    min-width: 20%;
+    position: fixed;
+    padding: 5px;
+    width: 20%;
+    height: 100%;
+}
+
+.home{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}

@@ -1,0 +1,28 @@
+.dialogs {
+    padding-top: 100px;
+    margin-left: 20%;
+}
+
+.dialogsItems {
+    position: absolute;
+}
+
+.adad {
+    width: 30px;
+}
+
+.dialogsItems .active {
+    color: #1a73e8;
+}
+
+.dialog {
+
+}
+
+.messages {
+    margin-left: 200px;
+}
+
+.message {
+
+}

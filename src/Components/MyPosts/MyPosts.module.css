@@ -1,0 +1,46 @@
+.posts_container {
+    margin-top: 50px;
+}
+
+.posts_button {
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
+    font-size: 20px;
+}
+
+.item img {
+    width: 7%;
+}
+
+.textarea {
+    outline-color: #1a73e8;
+    resize: none;
+    overflow: hidden;
+    -moz-appearance: none;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #f1f3f4;
+    border-color: #f1f3f4;
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #666;
+}
+
+.share {
+    width: 80px;
+    height: 40px;
+    background-color: #377dff;
+    border-color: #377dff;
+    color: #ffffff;
+    border-radius: 6px;
+    margin-left: 255px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.share_ava {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}

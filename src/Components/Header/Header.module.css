@@ -1,0 +1,41 @@
+.header {
+    height: 64px;
+    display: flex;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    align-items: center;
+    position: fixed;
+    background-color: #ffffff;
+    z-index: 100;
+    box-shadow: 0 1px 0 0 rgb(139 141 157 / 5%), 10px 1px 7px 0 rgb(65 71 108 / 15%);
+}
+
+.header_container {
+    height: 64px;
+}
+
+.img_logo {
+    width: 10%;
+}
+
+.profiles{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile_img {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.login_block {
+    margin-right: 15px;
+    align-items: center;
+    display: flex;
+}
+
+.login_block a {
+    color: #1a73e8;
+}
