@@ -6,7 +6,6 @@ const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING'
 const SET_STATUS = 'SET_STATUS'
 const DELETE_POST = 'DELETE_POST'
 
-
 const initialState = {
     posts: [
         {id: 1, message: 'Hi, how are you?', likes: 12},

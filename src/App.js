@@ -1,18 +1,19 @@
 import React from "react";
 import './App.css';
-import DialogsContainer from "./Components/Dialogs/DialogsContainer";
-import UsersContainer from "./Components/Users/UsersContainer";
-import HeaderContainer from "./Components/Header/Header-container";
-import ProfileContainer from "./Components/Profile/ProfileContainer";
-import Navbar from "./Components/Navbar/Navbar";
-import Login from "./Components/Login/Login";
-import NotFoundPage from "./Components/NotFoundPage/NotFoundPage";
+import UsersContainer from "./components/Users/UsersContainer";
+import HeaderContainer from "./components/Header/Header-container";
+import Navbar from "./components/Navbar/Navbar";
+import Login from "./components/Login/Login";
+import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 import {BrowserRouter, Route, Switch, withRouter} from "react-router-dom";
 import {connect, Provider} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app-reducer";
-import PreloaderTwo from "./Components/common/Preloader/preloader-2";
+import PreloaderTwo from "./components/common/Preloader/preloader-2";
 import store from "./redux/redux-store";
+
+const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
+const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
 
 class App extends React.Component {
     componentDidMount() {
@@ -26,12 +27,15 @@ class App extends React.Component {
         const mainRoutes = <>
             <HeaderContainer/>
             <Navbar/>
-            <Route path='/profile/:userId?'
-                   render={() => <ProfileContainer/>}/>
-            <Route path="/dialogs"
-                   render={() => <DialogsContainer/>}/>
-            <Route path="/users"
-                   render={() => <UsersContainer/>}/></>
+            <React.Suspense fallback={<div></div>}>
+                <Route path='/profile/:userId?'
+                       render={() => <ProfileContainer/>}/>
+                <Route path="/dialogs"
+                       render={() => <DialogsContainer/>}/>
+                <Route path="/users"
+                       render={() => <UsersContainer/>}/>
+            </React.Suspense>
+        </>
         return (
             <div className='app-wrapper'>
                 <Switch>

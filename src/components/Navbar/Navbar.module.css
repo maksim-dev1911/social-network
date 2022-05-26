@@ -15,7 +15,7 @@
     padding: 10px;
 }
 
-.item a.active {
+.item .active {
     color: #1a73e8;
 }
 
