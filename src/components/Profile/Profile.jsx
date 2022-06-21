@@ -7,9 +7,13 @@ import Friends from "../friends/friends";
 const Profile = (props) => {
     return <main className={classes.main_content}>
         <div className={classes.my_profile}>
-            <ProfileInfo profile={props.profile} status={props.status} updateStatus={props.updateStatus}/>
+            <ProfileInfo isOwner={props.isOwner}
+                         profile={props.profile}
+                         savePhoto={props.savePhoto}
+                         status={props.status}
+                         updateStatus={props.updateStatus}/>
             <MyPostsContainer store={props.store}/>
-            <Friends friends={props.friends}/>
+            {/*<Friends friends={props.friends}/>*/}
         </div>
     </main>
 }

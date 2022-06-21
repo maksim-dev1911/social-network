@@ -1,0 +1,11 @@
+.errorImg {
+    width: 15%;
+}
+
+.textError {
+    float: right;
+    font-size: 12px;
+    margin: 5px;
+    color: red;
+
+}

@@ -2,10 +2,8 @@ import React from "react";
 import Profile from "./Profile";
 import {connect} from "react-redux";
 import {
-    addCash,
-    getCash,
     getStatus,
-    getUserProfile,
+    getUserProfile, savePhoto,
     updateStatus
 } from "../../redux/profile-reducer";
 import Preloader from "../common/Preloader/preloader";
@@ -16,11 +14,11 @@ import {compose} from "redux";
 
 
 class ProfileContainer extends React.Component {
-    componentDidMount() {
+    refreshProfile() {
         let userId = this.props.match.params.userId;
-        if(!userId) {
+        if (!userId) {
             userId = this.props.authorizedUserId;
-            if(!userId) {
+            if (!userId) {
                 this.props.history.push("/login")
             }
         }
@@ -28,11 +26,28 @@ class ProfileContainer extends React.Component {
         this.props.getStatus(userId);
     }
 
+    componentDidMount() {
+        this.refreshProfile();
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.props.match.params.userId != prevProps.match.params.userId) {
+            this.refreshProfile();
+        }
+    }
+
     render() {
         return (
             <>
                 {this.props.isFetching ? <Preloader/> : null}
-                <Profile {...this.props} cash={this.props.cash} addCash={this.props.addCash} getCash={this.props.getCash} profile={this.props.profile} status={this.props.status} updateStatus={this.props.updateStatus}/>
+                <Profile {...this.props}
+                         isOwner={!this.props.match.params.userId}
+                         profile={this.props.profile}
+                         status={this.props.status}
+                         updateStatus={this.props.updateStatus}
+                         savePhoto={this.props.savePhoto}
+                />
+
             </>
         )
     }
@@ -50,7 +65,8 @@ const mapStateToProps = (state) => {
 }
 
 export default compose(
-    connect(mapStateToProps, {getUserProfile,getStatus, updateStatus, toggleIsFetching}),
+    connect(mapStateToProps, {getUserProfile, getStatus, updateStatus, savePhoto,
+        toggleIsFetching}),
     withRouter,
     withAuthRedirect
 )(ProfileContainer);

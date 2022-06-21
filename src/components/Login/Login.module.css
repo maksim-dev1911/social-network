@@ -111,3 +111,15 @@
     margin-right: 15px;
 }
 
+.symbol_captcha {
+    border-radius: 7px;
+    border: 1px solid #eceff5;
+    outline: none;
+    color: #666;
+    height: 43px;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #f1f3f4;
+}
+

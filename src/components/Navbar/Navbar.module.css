@@ -8,15 +8,18 @@
 }
 
 .item a {
-    color: #202124;
+    color: #888;
 }
 
 .nav {
     padding: 10px;
+    margin: 5px;
+    background-color: #ffffff;
+    border-radius: 15px;
 }
 
-.item .active {
-    color: #1a73e8;
+.active {
+    background: #1a73e8;
 }
 
 
@@ -28,6 +31,7 @@
     padding: 5px;
     width: 20%;
     height: 100%;
+    background-color: #F5F5F5;
 }
 
 .home{

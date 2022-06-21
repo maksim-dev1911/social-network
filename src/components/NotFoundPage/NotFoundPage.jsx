@@ -4,7 +4,7 @@ import classes from "./NotFoundPage.module.css";
 const NotFoundPage = () => {
     return (
         <div className={classes.error}>
-            The page is not available!
+            404 Error
         </div>
     )
 }

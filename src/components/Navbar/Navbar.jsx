@@ -3,6 +3,7 @@ import classes from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
 
 const Navbar = () => {
+
     return <aside className={classes.aside}>
         <div className={classes.side_children}>
             <div>
@@ -13,8 +14,8 @@ const Navbar = () => {
                                 <img className={classes.home}
                                      src='https://www.rawshorts.com/freeicons/wp-content/uploads/2017/01/blue_repicthousebase_1484336386-1.png'/>
                             </div>
-                            <NavLink to="/profile"
-                                     activeClassName={classes.active}>Profile</NavLink>
+                            <NavLink  to="/profile"
+                            >Profile</NavLink>
                         </li>
                         <li className={classes.item}>
                             <div>
@@ -22,7 +23,7 @@ const Navbar = () => {
                                      src='https://www.freeiconspng.com/thumbs/message-icon-png/message-icon-png-13.png'/>
                             </div>
                             <NavLink to="/dialogs"
-                                     activeClassName={classes.active}>Messages</NavLink>
+                                     >Messages</NavLink>
                         </li>
                         <li className={classes.item}>
                             <div>
@@ -30,7 +31,7 @@ const Navbar = () => {
                                      src='https://www.pinclipart.com/picdir/big/150-1503030_iconoequipo-intercom-chat-icon-svg-clipart.png'/>
                             </div>
                             <NavLink to="/users"
-                                     activeClassName={classes.active}>People</NavLink>
+                                     >People</NavLink>
                         </li>
                     </ul>
                 </nav>
