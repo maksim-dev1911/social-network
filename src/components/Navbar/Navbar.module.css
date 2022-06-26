@@ -11,17 +11,16 @@
     color: #888;
 }
 
+a.active {
+    color: #1a73e8;
+}
+
 .nav {
     padding: 10px;
     margin: 5px;
     background-color: #ffffff;
     border-radius: 15px;
 }
-
-.active {
-    background: #1a73e8;
-}
-
 
 .aside {
     flex: 0 0 20%;

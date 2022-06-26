@@ -79,6 +79,13 @@ export const requestUsers = (page, pageSize) => {
     }
 }
 
+export const getUsersTh = () => {
+    return async (dispatch) => {
+        const data = await usersAPI.getUsersD();
+        dispatch(setUsers(data.items));
+    }
+}
+
 const followUnfollowFlow = async (dispatch, userId, apiMethod, actionCreator) => {
     dispatch(toggleFollowingProgress(true, userId));
 

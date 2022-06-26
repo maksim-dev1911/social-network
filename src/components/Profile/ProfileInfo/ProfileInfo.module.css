@@ -4,12 +4,11 @@
 }
 
 .my_profile {
-    padding: 20px 20px 0 20px;
+    padding-top: 20px;
 }
 
 .background_profile {
     border-radius: 12px;
-    width: 70%;
 }
 
 .profile_banner {
@@ -23,29 +22,28 @@
 }
 
 .photos {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     position: absolute;
 }
 
 .avatar_container {
     position: absolute;
-    bottom: 130px;
+    bottom: 30px;
     width: 120px;
     left: 0;
-    right: 0;
+    right: 800px;
     margin: auto;
-    display: flex;
-    justify-content: center;
 }
 
 .name_profile {
-    position:absolute;
+    position: absolute;
     bottom: -70px;
     color: #464646;
     text-transform: capitalize;
     margin-bottom: 10px;
+    left: 180px;
     font-size: 12px;
     font-weight:normal;
 }
@@ -62,19 +60,28 @@
 }
 
 .aboutMe {
+    margin-top: 10px;
+}
+
+.active {
+    border-bottom: 1px solid #000000;
+    width: 5px;
+    justify-content: center;
+    display: flex;
 }
 
 .text_aboutMe {
     font-weight: bold;
-    margin-top: 100px;
-    font-size: 20px;
+    padding: 15px;
+    color: #adb5bd;
+    font-size: 14px;
 }
 
 .button_Edit {
     position: absolute;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border: none;
     outline: none;
     background: none;
@@ -102,4 +109,10 @@
     display: inline-block;
     font-size: 15px;
     cursor: pointer;
+}
+
+.border_bottom {
+    border: 1px solid #F5F5F5;
+    margin-top: 100px;
+    width: 100%;
 }

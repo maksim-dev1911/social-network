@@ -14,6 +14,13 @@ export const usersAPI = {
             });
     },
 
+    getUsersD() {
+        return instance.get(`users?friend=true&count=9`)
+            .then(response => {
+                return response.data;
+            });
+    },
+
     unfollow(userId) {
         return instance.delete(`follow/${userId}`)
             .then(response => {

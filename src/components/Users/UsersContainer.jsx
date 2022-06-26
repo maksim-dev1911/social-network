@@ -18,7 +18,6 @@ import {
     getTotalUsersCount, getUsers,
 } from "../../redux/users-selector";
 
-
 class UsersContainer extends React.Component {
     componentDidMount() {
         const {currentPage, pageSize} = this.props;
@@ -47,7 +46,7 @@ class UsersContainer extends React.Component {
     }
 }
 
-let mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
     return {
         users: getUsers(state),
         pageSize: getPageSize(state),

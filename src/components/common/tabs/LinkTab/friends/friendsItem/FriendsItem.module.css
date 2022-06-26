@@ -1,0 +1,30 @@
+.avatar {
+    width: 80px;
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+}
+
+.userName {
+    text-align: center;
+    font-weight: 700;
+}
+
+.friendsItem {
+    background-color: #ffffff;
+    padding: 10px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+.btnUnFollow {
+    text-align: center;
+    color: #ffffff;
+    background-color: #05f;
+    margin: 0 100px 0 100px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px;
+    cursor: pointer;
+}

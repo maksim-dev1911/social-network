@@ -5,6 +5,7 @@ import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import userPhoto from "../../../assets/images/user.png";
 import {Modal, Typography} from "@mui/material";
 import Box from "@mui/material/Box";
+import TabPanel from "../../common/tabs/Tabs";
 
 const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
     const [open, setOpen] = useState(false);
@@ -37,7 +38,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
         <div className={classes.my_profile}>
             <div className={classes.profile_banner}>
                 <img className={classes.background_profile}
-                     src='https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683_960_720.png'/>
+                     src='http://sociala.uitheme.net/assets/images/u-bg.jpg'/>
                 <div className={classes.avatar_container}>
                     <img className={classes.photos} src={profile.photos.large || userPhoto}/>
                     {isOwner && <button className={classes.button_Edit} onClick={handleOpen}>Edit</button>}
@@ -54,7 +55,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
                     >
                         <Box sx={style}>
                             <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    {isOwner && <input type="file" onChange={onMainPhotoSelected}/>}
+                                {isOwner && <input type="file" onChange={onMainPhotoSelected}/>}
                             </Typography>
                             <Typography id="modal-modal-description" sx={{mt: 2}}>
                                 <button className={classes.close_button} onClick={handleClose}>Close</button>
@@ -65,14 +66,9 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto}) => {
             </div>
             <div>
                 <div>
-                    <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
+                    {/*<ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>*/}
                 </div>
-                <div className={classes.text_aboutMe}>
-                    About
-                </div>
-                <div className={classes.aboutMe}>
-                    {profile.aboutMe}
-                </div>
+                <div className={classes.border_bottom}></div>
             </div>
         </div>
     </main>

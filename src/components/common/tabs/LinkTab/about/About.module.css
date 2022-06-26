@@ -1,0 +1,19 @@
+.aboutMe {
+    padding: 10px;
+    width: 25%;
+    font-size: 15px;
+    background-color: #ffffff;
+    border-radius: 5%;
+}
+
+.about {
+    margin-top: 10px;
+
+}
+
+.text_About {
+    margin: 2px 0 15px 0;
+    font-weight: 700;
+    color: #212529;
+    font-size: 15px;
+}

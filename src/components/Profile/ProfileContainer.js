@@ -7,11 +7,11 @@ import {
     updateStatus
 } from "../../redux/profile-reducer";
 import Preloader from "../common/Preloader/preloader";
-import {toggleIsFetching} from "../../redux/users-reducer";
+import {getUsersTh, toggleIsFetching, unfollow} from "../../redux/users-reducer";
 import {withRouter} from "react-router-dom";
 import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 import {compose} from "redux";
-
+import {getUsers} from "../../redux/users-selector";
 
 class ProfileContainer extends React.Component {
     refreshProfile() {
@@ -28,6 +28,7 @@ class ProfileContainer extends React.Component {
 
     componentDidMount() {
         this.refreshProfile();
+        this.props.getUsers();
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -46,8 +47,9 @@ class ProfileContainer extends React.Component {
                          status={this.props.status}
                          updateStatus={this.props.updateStatus}
                          savePhoto={this.props.savePhoto}
+                         users={this.props.users}
+                         unfollow={this.props.unfollow}
                 />
-
             </>
         )
     }
@@ -55,6 +57,7 @@ class ProfileContainer extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
+        users: getUsers(state),
         friends: state.friendsReducer.friends,
         profile: state.profilePage.profile,
         isFetching: state.profilePage.isFetching,
@@ -66,7 +69,7 @@ const mapStateToProps = (state) => {
 
 export default compose(
     connect(mapStateToProps, {getUserProfile, getStatus, updateStatus, savePhoto,
-        toggleIsFetching}),
+        toggleIsFetching, getUsers: getUsersTh, unfollow}),
     withRouter,
     withAuthRedirect
 )(ProfileContainer);
